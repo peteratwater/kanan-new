@@ -880,8 +880,7 @@
         "category": "Interface",
         "patches": [
             {
-                "pattern": "8D 4D EC 38  5D 08 74 5A",
-                "offset": -19,
+                "pattern": "0F 84 14 02 00 00 8B 01 8B 80 ? ? ? ? FF D0 84 C0 0F 84 02 02 00 00 8B CB E8",
                 "patch": "90 E9"
             }
         ]
