@@ -887,6 +887,18 @@
         ]
     },
     {
+        "name": "Disable CatSidhe Talent bonus training select popup",
+        "desc": "Disables the Catsidhe training bonus selection menu on summon if a talent has not been chosen. Turning off the patch will allow selection once more.",
+        "category": "Interface",
+        "patches": [
+            {
+                "pattern": "? ? AD 00 00 0F 87 ? ? ? ? 0F 84 ? ? ? ? 2D A4 A8 00 00",
+                "offset": 5,
+                "patch": "90 E9"
+            }
+        ]
+    },
+    {
         "name": "Disable Alpaca Carrying",
         "desc": "Change mounting logic to always ride an Alpaca and never carry it. \nCredits: Rydian",
         "category": "Quality of Life",
