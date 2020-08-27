@@ -23,7 +23,6 @@
 #include "StatusUI.hpp"
 #include "LoginScreen.hpp"
 #include "DontMoveToSquadChat.hpp"
-#include "NaturalDyes.hpp"
 
 #include "Log.hpp"
 
@@ -117,7 +116,6 @@ namespace kanan {
         addMod(make_unique<FreezeTimeOfDay>());
         addMod(make_unique<SecondaryPassword>());
         addMod(make_unique<StatusUI>());
-        addMod(make_unique<NaturalDyes>());
 
         log("[Mods] Finished loading mods.");
     }

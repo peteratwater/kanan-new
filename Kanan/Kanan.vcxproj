@@ -123,7 +123,6 @@
     <ClCompile Include="Log.cpp" />
     <ClCompile Include="LoginScreen.cpp" />
     <ClCompile Include="Mods.cpp" />
-    <ClCompile Include="NaturalDyes.cpp" />
     <ClCompile Include="PatchMod.cpp" />
     <ClCompile Include="RangedAttackSwap.cpp" />
     <ClCompile Include="SecondaryPassword.cpp" />
@@ -155,7 +154,6 @@
     <ClInclude Include="Mabinogi.hpp" />
     <ClInclude Include="Mod.hpp" />
     <ClInclude Include="Mods.hpp" />
-    <ClInclude Include="NaturalDyes.hpp" />
     <ClInclude Include="PatchMod.hpp" />
     <ClInclude Include="RangedAttackSwap.hpp" />
     <ClInclude Include="SecondaryPassword.hpp" />
