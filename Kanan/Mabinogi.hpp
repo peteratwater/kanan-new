@@ -25,7 +25,7 @@ using Matrix4x4f = Matrix4x4;
 class CRendererPtr
 {
 public:
-	class CRenderer *renderer; //0x0000
+	class CRenderer* renderer; //0x0000
 	char pad_0004[60]; //0x0004
 }; //Size: 0x0040
 
@@ -33,14 +33,14 @@ class CRenderer
 {
 public:
 	char pad_0000[36]; //0x0000
-	class CCamera *camera; //0x0024
+	class CCamera* camera; //0x0024
 	char pad_0028[28]; //0x0028
 }; //Size: 0x0044
 
 class CCamera
 {
 public:
-	class CCameraState *state; //0x0000
+	class CCameraState* state; //0x0000
 	char pad_0004[64]; //0x0004
 }; //Size: 0x0044
 
@@ -63,14 +63,14 @@ public:
 	char pad_0058[28]; //0x0058
 	float aspectRatio; //0x0074
 	char pad_0078[212]; //0x0078
-	Matrix4x4 viewMatrix; //0x014C
+	Matrix4x4 transformMatrix; //0x014C
 	char pad_018C[84]; //0x018C
 }; //Size: 0x01E0
 
 class CEntityListPtr
 {
 public:
-	class CEntityList *entityList; //0x0000
+	class CEntityList* entityList; //0x0000
 	char pad_0004[60]; //0x0004
 }; //Size: 0x0040
 
@@ -78,7 +78,7 @@ class CItemList
 {
 public:
 	char pad_0000[4]; //0x0000
-	class CItemListNode *root; //0x0004
+	class CItemListNode* root; //0x0004
 	uint32_t count; //0x0008
 }; //Size: 0x000C
 
@@ -86,7 +86,7 @@ class CCharacterList
 {
 public:
 	char pad_0000[4]; //0x0000
-	class CCharacterListNode *root; //0x0004
+	class CCharacterListNode* root; //0x0004
 	uint32_t count; //0x0008
 }; //Size: 0x000C
 
@@ -103,30 +103,30 @@ public:
 class CItemListNode
 {
 public:
-	class CItemListNodeEntry *entry; //0x0000
-	class CItemListNode *next; //0x0004
+	class CItemListNodeEntry* entry; //0x0000
+	class CItemListNode* next; //0x0004
 }; //Size: 0x0008
 
 class CItemListNodeEntry
 {
 public:
 	char pad_0000[16]; //0x0000
-	class CItem *item; //0x0010
+	class CItem* item; //0x0010
 	char pad_0014[48]; //0x0014
 }; //Size: 0x0044
 
 class CCharacterListNode
 {
 public:
-	class CCharacterListNodeEntry *entry; //0x0000
-	class CCharacterListNode *next; //0x0004
+	class CCharacterListNodeEntry* entry; //0x0000
+	class CCharacterListNode* next; //0x0004
 }; //Size: 0x0008
 
 class CCharacterListNodeEntry
 {
 public:
 	char pad_0000[16]; //0x0000
-	class CCharacter *character; //0x0010
+	class CCharacter* character; //0x0010
 	char pad_0014[48]; //0x0014
 }; //Size: 0x0044
 
@@ -134,22 +134,22 @@ class CCharacter
 {
 public:
 	char pad_0000[4]; //0x0000
-	class CEntityID *entityID; //0x0004
+	class CEntityID* entityID; //0x0004
 	char pad_0008[128]; //0x0008
-	class CParameter *parameter; //0x0088
-	class CAction *action; //0x008C
-	char pad_0090[432]; //0x0090
-	class CEquipment *equipment; //0x0240
-	char pad_0244[84]; //0x0244
-	uint64_t targetID; //0x0298
-	char pad_02A0[700]; //0x02A0
-}; //Size: 0x055C
+	class CParameter* parameter; //0x0088
+	class CAction* action; //0x008C
+	char pad_0090[436]; //0x0090
+	class CEquipment* equipment; //0x0244
+	char pad_0248[88]; //0x0248
+	uint64_t targetID; //0x02A0
+	char pad_02A8[700]; //0x02A8
+}; //Size: 0x0564
 
 class CItem
 {
 public:
 	char pad_0000[4]; //0x0000
-	class CEntityID *entityID; //0x0004
+	class CEntityID* entityID; //0x0004
 	uint32_t inventoryID; //0x0008
 	uint32_t itemID; //0x000C
 	uint32_t color1; //0x0010
@@ -171,11 +171,11 @@ public:
 	uint32_t maxDurability; //0x0074
 	uint32_t originalDurability; //0x0078
 	char pad_007C[92]; //0x007C
-	class SItemDBDesc *dbDesc; //0x00D8
+	class SItemDBDesc* dbDesc; //0x00D8
 	char pad_00DC[28]; //0x00DC
 	uint64_t ownerID; //0x00F8
 	char pad_0100[36]; //0x0100
-	class CString *name; //0x0124
+	class CString* name; //0x0124
 	char pad_0128[56]; //0x0128
 }; //Size: 0x0160
 
@@ -190,7 +190,7 @@ class CMemberString
 {
 public:
 	char pad_0000[4]; //0x0000
-	class CString *value; //0x0004
+	class CString* value; //0x0004
 	char pad_0008[8]; //0x0008
 }; //Size: 0x0010
 
@@ -318,8 +318,8 @@ class CAction
 {
 public:
 	char pad_0000[64]; //0x0000
-	class CCharacter *character; //0x0040
-	class CAnimatorContext *animatorContext; //0x0044
+	class CCharacter* character; //0x0040
+	class CAnimatorContext* animatorContext; //0x0044
 	char pad_0048[1020]; //0x0048
 }; //Size: 0x0444
 
@@ -327,7 +327,7 @@ class CAnimatorContext
 {
 public:
 	char pad_0000[4]; //0x0000
-	class CFramework *framework; //0x0004
+	class CFramework* framework; //0x0004
 	char pad_0008[60]; //0x0008
 }; //Size: 0x0044
 
@@ -342,7 +342,7 @@ public:
 class CWorldPtr
 {
 public:
-	class CWorld *world; //0x0000
+	class CWorld* world; //0x0000
 	char pad_0004[60]; //0x0004
 }; //Size: 0x0040
 
@@ -358,12 +358,12 @@ class SItemDBDesc
 {
 public:
 	char pad_0000[40]; //0x0000
-	class CString *type; //0x0028
+	class CString* type; //0x0028
 	char pad_002C[8]; //0x002C
-	class CString *displayName; //0x0034
+	class CString* displayName; //0x0034
 	char pad_0038[4]; //0x0038
-	class CString *name; //0x003C
-	class CString *description; //0x0040
+	class CString* name; //0x003C
+	class CString* description; //0x0040
 	char pad_0044[136]; //0x0044
 	uint16_t maxStackCount; //0x00CC
 	char pad_00CE[106]; //0x00CE
@@ -372,7 +372,7 @@ public:
 class CAccountPtr
 {
 public:
-	class CAccount *account; //0x0000
+	class CAccount* account; //0x0000
 	char pad_0004[60]; //0x0004
 }; //Size: 0x0040
 
@@ -412,15 +412,3 @@ public:
 	uint32_t chatTab; //0x0158
 	char pad_015C[728]; //0x015C
 }; //Size: 0x0434
-
-class N00000B19
-{
-public:
-	char pad_0000[68]; //0x0000
-}; //Size: 0x0044
-
-class N00000A4D
-{
-public:
-	char pad_0000[68]; //0x0000
-}; //Size: 0x0044
